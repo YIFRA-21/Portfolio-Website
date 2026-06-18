@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-root",
+  "version": "1.0.0",
+  "description": "Root orchestrator for Belay Ayele portfolio application",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix frontend && py -m pip install django django-cors-headers",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "py backend/manage.py runserver 0.0.0.0:8000",
+    "dev": "npx concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  },
+  "dependencies": {
+    "django": "^99.99.99"
+  }
+}
